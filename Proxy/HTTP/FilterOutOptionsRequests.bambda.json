@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"/**\r\n * Filter out OPTIONS requests.\r\n *\r\n * @author Trikster\r\n **/\r\n\r\nreturn !requestResponse.request().method().equals(\"OPTIONS\");"
+        }
+    }
+}

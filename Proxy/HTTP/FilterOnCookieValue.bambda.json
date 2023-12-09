@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"/**\r\n * Filters Proxy HTTP history for requests with a specific Cookie value.\r\n *\r\n * @author LostCoder\r\n **/\r\n\r\nif (requestResponse.request().hasParameter(\"foo\", HttpParameterType.COOKIE)) {\r\n\tvar cookieValue = requestResponse\r\n\t\t.request()\r\n\t\t.parameter(\"foo\", HttpParameterType.COOKIE)\r\n\t\t.value();\r\n\r\n\treturn cookieValue.contains(\"1337\");\r\n}\r\n\r\nreturn false;"
+        }
+    }
+}

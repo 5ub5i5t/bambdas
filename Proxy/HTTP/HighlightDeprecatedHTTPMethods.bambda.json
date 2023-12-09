@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"/**\r\n * Filters and highlights requests using less common or deprecated HTTP methods like TRACE or CONNECT.\r\n * @author Tur24Tur / BugBountyzip (https://github.com/BugBountyzip)\r\n **/\r\n\r\nboolean manualColorHighlightEnabled = true;\r\n\r\n// Define the set of deprecated or less common HTTP methods\r\nSet<String> deprecatedMethods = Set.of(\"TRACE\", \"CONNECT\");\r\n\r\nString requestMethod = requestResponse.request().method();\r\n\r\n// Check if the request method is in the set of deprecated methods\r\nif (deprecatedMethods.contains(requestMethod)) {\r\n    if (manualColorHighlightEnabled) {\r\n        // Set the highlight color to RED\r\n        requestResponse.annotations().setHighlightColor(HighlightColor.RED);\r\n\r\n        // Optionally, add a note to the request/response\r\n        requestResponse.annotations().setNotes(\"Deprecated method used: \" + requestMethod);\r\n    }\r\n    return true;\r\n}\r\n\r\nreturn false;"
+        }
+    }
+}

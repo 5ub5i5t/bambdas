@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"/**\r\n * Finds JSON responses with wrong Content-Type\r\n *\r\n * The content is probably json but the content type is not application/json\r\n *\r\n * @author albinowax\r\n **/\r\n\r\nvar contentType = requestResponse.hasResponse() ? requestResponse.response().headerValue(\"Content-Type\") : null;\r\n\r\nif (contentType != null && !contentType.contains(\"application/json\")) {\r\n String body = requestResponse.response().bodyToString().trim();\r\n\r\n return body.startsWith( \"{\" ) || body.startsWith( \"[\" );\r\n}\r\n\r\nreturn false;"
+        }
+    }
+}

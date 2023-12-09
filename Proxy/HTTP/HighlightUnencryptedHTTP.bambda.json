@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"/**\r\n * Bambda Script to Highlight Unencrypted HTTP Traffic\r\n * Filters Proxy HTTP history for unencrypted (non-HTTPS) requests.\r\n * @author Tur24Tur / BugBountyzip (https://github.com/BugBountyzip)\r\n **/\r\n\r\n// Get the request object from the requestResponse\r\nvar request = requestResponse.request();\r\n\r\n// Extract the URL from the request\r\nvar requestUrl = request.url();\r\n\r\n// Check if the request URL starts with \"http://\"\r\nif (requestUrl.startsWith(\"http://\")) {\r\n    // URL is unencrypted, return true to highlight this request\r\n    return true;\r\n}\r\n\r\n// URL is encrypted or does not match the criteria, return false\r\nreturn false;"
+        }
+    }
+}
