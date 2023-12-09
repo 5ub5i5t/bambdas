@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"// Original Author:\r\n// https://twitter.com/TolgaDemirayak/status/1727074336056783190\r\n\n//\n// CODE MODIFICATION: Show all results (not just in scope)\n//\n\n// Uncomment below to filter to in scope items.\r\n//if (!requestResponse.request().isInScope()) {\r\n//\treturn false;\r\n//\t}\n\r\nvar contentType = requestResponse.response().headerValue(\"Content-Type\");\r\nif (contentType == null || \r\n\t(!contentType.contains(\"application/javascript\") && \r\n\t!contentType.contains(\"text/javascript\") && \r\n\t!contentType.contains(\"application/x-javascript\"))\n) {\r\n\treturn false;\r\n\t}\r\nreturn true;"
+        }
+    }
+}

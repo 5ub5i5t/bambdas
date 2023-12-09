@@ -1,0 +1,7 @@
+{
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"// Author:\r\n// https://twitter.com/TolgaDemirayak/status/1727074336056783190\r\n\r\nif (!requestResponse.request().isInScope()) {\r\n\treturn false;\r\n\t}\r\nvar contentType = requestResponse.response().headerValue(\"Content-Type\");\r\nif (contentType == null || \r\n\t(!contentType.contains(\"application/javascript\") && \r\n\t!contentType.contains(\"text/javascript\") && \r\n\t!contentType.contains(\"application/x-javascript\"))\n) {\r\n\treturn false;\r\n\t}\r\nreturn true;"
+        }
+    }
+}
